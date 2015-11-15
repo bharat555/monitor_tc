@@ -8,25 +8,25 @@ Updated monitor_tc.pl, again
 
 This time I recevied a mail from Bob Toxen. He update the monitor script. I renamed his version to monitor_tc_top_bis.pl. You can download it below.
 
-#Bob #   Tokens - The tokens of the specific class
-#Bob #   Ctokens - is the ctokens of the specific class
-#   Rate - the send bytes pr. second that the class it self gives(htb)
-#   Interval Speed - Is the bytes/sec messurement in this interval
-#   Cumulated Send - Is the amount of data that has been send while this
-#                    program has been running.
-#   Total Send - Is the total send amount sence the tc class have been
-#   started
-#
-#   The parent class is highlighted
-#
-#
-# Input parameters:
-#
-# dev=eth3        for getting tc on device eth3
-# dev="eth0 eth3" for a list of devices
-# sleep=1000000   the sleeping period between sdreen updates.
-# once=yes        display only a single iteration and without escape
-# seq.
+    #Bob #   Tokens - The tokens of the specific class
+    #Bob #   Ctokens - is the ctokens of the specific class
+    #   Rate - the send bytes pr. second that the class it self gives(htb)
+    #   Interval Speed - Is the bytes/sec messurement in this interval
+    #   Cumulated Send - Is the amount of data that has been send while this
+    #                    program has been running.
+    #   Total Send - Is the total send amount sence the tc class have been
+    #   started
+    #
+    #   The parent class is highlighted
+    #
+    #
+    # Input parameters:
+    #
+    # dev=eth3        for getting tc on device eth3
+    # dev="eth0 eth3" for a list of devices
+    # sleep=1000000   the sleeping period between sdreen updates.
+    # once=yes        display only a single iteration and without escape
+    # seq.
 
 Updated monitor_tc.pl
 
@@ -42,18 +42,18 @@ dev="eth0 eth3" to monitor two interfaces.
 
 The program while running could look like this:
 
- 14:02:32 up 51 days, 21:35,  3 users,  load average: 0.02, 0.03, 0.01
-                                          Interval    Cumulated Total
-Dev  Classid   Tokens   Ctokens Rate      Speed       Send      Send
--------------------------------------------------------------------------
-eth0 1:1       148      10353   23.99KB   13.46KB/s   40.48KB   599.54GB
-eth0 1:10      14185    13899   8.23KB    169B/s      508B      42.33GB
-eth0 1:20      14185    13899   7B        0B/s        0B        388.07GB
-eth0 1:30      5796     13160   15.54KB   13.28KB/s   39.94KB   169.01GB
-eth0 1:40      159      10363   49B       15B/s       46B       136.90MB
-eth3 2:1       -4463    173     52.00KB   56.68KB/s   170.47KB  112.82GB
-eth3 2:10      11601    16237   740B      454B/s      1.33KB    1.98GB
-eth3 2:20      -2241223 173     51.49KB   56.23KB/s   169.13KB  110.85GB
+     14:02:32 up 51 days, 21:35,  3 users,  load average: 0.02, 0.03, 0.01
+                                              Interval    Cumulated Total
+    Dev  Classid   Tokens   Ctokens Rate      Speed       Send      Send
+    -------------------------------------------------------------------------
+    eth0 1:1       148      10353   23.99KB   13.46KB/s   40.48KB   599.54GB
+    eth0 1:10      14185    13899   8.23KB    169B/s      508B      42.33GB
+    eth0 1:20      14185    13899   7B        0B/s        0B        388.07GB
+    eth0 1:30      5796     13160   15.54KB   13.28KB/s   39.94KB   169.01GB
+    eth0 1:40      159      10363   49B       15B/s       46B       136.90MB
+    eth3 2:1       -4463    173     52.00KB   56.68KB/s   170.47KB  112.82GB
+    eth3 2:10      11601    16237   740B      454B/s      1.33KB    1.98GB
+    eth3 2:20      -2241223 173     51.49KB   56.23KB/s   169.13KB  110.85GB
 
 
 
@@ -104,8 +104,8 @@ I use this script to test my tc setups. This scripts logs all the counters in /t
 
 Example output of monitor.pl :
 
-############################# 2.325 KB/s 3.718 KB/s 9.290 KB/s  T 15.33 KB/s  G 14.73 KB/s 15.16%  24.24%  30.65% 31.69%
-############################# SP1        SP2        SP3         T SP4         G SP5        PR1     PR2     PR3    PR4
+    ############################# 2.325 KB/s 3.718 KB/s 9.290 KB/s  T 15.33 KB/s  G 14.73 KB/s 15.16%  24.24%  30.65%     31.69%
+    ############################# SP1        SP2        SP3         T SP4         G SP5        PR1     PR2     PR3        PR4
 
 Explanation :
 SP1 : Bandwidth of first chain
